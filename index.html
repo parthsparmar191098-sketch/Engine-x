@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENGINE-X — Explore engineering, machines, space technology and interactive learning.">
+  <title>ENGINE-X | Engineering Beyond Limits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span> ENGINE-X</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="pages/engines.html">Engines</a>
+      <a href="pages/space.html">Space</a>
+      <a href="pages/mechanical.html">Mechanical</a>
+      <a href="pages/robotics.html">Robotics</a>
+      <a href="pages/aviation.html">Aviation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">ENGINEERING • SCIENCE • TECHNOLOGY</p>
+        <h1>Explore the <span>future</span> of engineering.</h1>
+        <p class="hero-text">Discover how machines work through clear explanations, technical visuals and interactive experiences.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#categories">Explore Topics</a>
+          <a class="btn secondary" href="#featured">View Models</a>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-label="Decorative rotating engineering visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="core">X</div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="categories">
+      <div class="section-heading">
+        <p class="eyebrow">DISCOVER</p>
+        <h2>Explore categories</h2>
+        <p>Choose a field and start learning.</p>
+      </div>
+      <div class="card-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section reveal" id="featured">
+      <div class="section-heading">
+        <p class="eyebrow">FEATURED</p>
+        <h2>Engineering objects</h2>
+        <p>Explore the systems behind modern technology.</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search an item..."></label>
+      </div>
+      <div class="card-grid" id="itemGrid"></div>
+    </section>
+
+    <section class="section learning reveal">
+      <div>
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>Learn. Explore. Understand.</h2>
+        <p>Every topic can grow into an interactive learning page with parts, working principles, diagrams and animations.</p>
+      </div>
+      <div class="steps">
+        <div><b>01</b><span>Explore the object</span></div>
+        <div><b>02</b><span>Discover the parts</span></div>
+        <div><b>03</b><span>Understand the working</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand" href="index.html">✦ ENGINE-X</a><p>Explore. Understand. Engineer.</p></div>
+    <div class="footer-links"><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a></div>
+    <p class="copyright">© <span id="year"></span> ENGINE-X</p>
+  </footer>
+  <script src="data/items.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
