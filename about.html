@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About Engine-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="About Engine-X, a free interactive 3D atlas of real machines, and its creator Parth Parmar.">
+<link rel="canonical" href="https://parthsparmar191098-sketch.github.io/Engine-x/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#070b14; --accent:#5ea7ff; --accent2:#8a6cff; --ink:#eaf1ff; --ink-dim:#8fa1bc; color-scheme:dark; }
+  *{box-sizing:border-box;}
+  html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,-apple-system,sans-serif; }
+  a{ color:#8fc4ff; }
+  .wrap{ max-width:720px; margin:0 auto; padding:56px 24px 96px; }
+  .back{ display:inline-block; margin-bottom:28px; color:var(--ink-dim); text-decoration:none; font-size:14px; }
+  .back:hover{ color:#8fc4ff; }
+  h1{ font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:clamp(30px,5vw,44px); line-height:1.1; margin:0 0 24px; }
+  h2{ font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(20px,3vw,26px); margin:36px 0 10px; }
+  p{ color:#cfd9ec; line-height:1.75; font-size:16.5px; margin:0 0 18px; }
+  .cta{ margin-top:40px; padding:22px; border:1px solid rgba(94,167,255,0.25); border-radius:12px; background:rgba(94,167,255,0.06); }
+  .btn{ display:inline-block; margin-top:10px; padding:10px 20px; border-radius:8px; background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#04101f; font-weight:600; text-decoration:none; }
+  footer{ text-align:center; color:var(--ink-dim); font-size:13px; padding:24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Engine-X home</a>
+  <h1>About Engine-X</h1>
+
+  <p>
+    Engine&#8209;X is a free, browser&#8209;based interactive 3D atlas that models real mechanical systems part by
+    part. Every component is built as true 3D geometry — not a video or a static render — so you can explode the
+    assembly, slice it open with a section view, switch to an X&#8209;ray mode, and watch it run with true
+    kinematics: the parts move at the speeds and in the directions they actually would in the real machine.
+  </p>
+  <p>
+    It exists because diagrams and animations usually only show a machine from one angle, at one moment. Engine&#8209;X
+    lets you take the whole thing apart yourself, at your own pace, from any angle.
+  </p>
+
+  <h2>Who built it</h2>
+  <p>
+    Engine&#8209;X is engineered by <b>Parth Parmar</b>, a mechanical engineer with a hands-on interest in mechanical
+    design, machine learning and AI automation. Engine&#8209;X sits right at that intersection: real mechanical
+    engineering — gears, shafts, bearings, kinematics — brought to life through AI-assisted development, without a
+    traditional software background. It's a way of exploring how automation and AI tools can help an engineer design,
+    visualize and explain machines faster, not replace the engineering judgment behind them.
+  </p>
+  <p>
+    Engine&#8209;X was built working turn by turn with Claude, an AI assistant. The full story of how it was built is
+    on the <a href="blog-making-of.html">"How it was built"</a> page.
+  </p>
+
+  <h2>What's in it right now</h2>
+  <p>
+    The atlas currently covers a turbocharger and a V&#8209;belt pulley drive, with more machines planned. See the
+    <a href="blog-how-it-works.html">explainer post</a> for a live, always&#8209;current list of every machine and
+    how each one works.
+  </p>
+
+  <div class="cta">
+    <div style="color:var(--ink);font-weight:600;">Get in touch or explore</div>
+    <p style="margin:8px 0 0;">Questions, feedback, or ideas for the next machine? <a href="contact.html">Contact Parth</a>, or dive straight into the atlas.</p>
+    <a class="btn" href="atlas.html">Enter the Atlas &rarr;</a>
+  </div>
+</div>
+<footer>Engine&#8209;X — engineered by Parth Parmar.</footer>
+</body>
+</html>
