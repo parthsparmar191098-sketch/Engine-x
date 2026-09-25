@@ -11,9 +11,10 @@ Engine-X is free to use, requires no install or account, and runs entirely in th
 
 ## Pages
 
-- [Home](https://parthsparmar191098-sketch.github.io/Engine-x/): cinematic landing page, trailer and an FAQ-style explanation of both machines.
+- [Home](https://parthsparmar191098-sketch.github.io/Engine-x/): cinematic landing page and trailer.
 - [Atlas](https://parthsparmar191098-sketch.github.io/Engine-x/atlas.html): the interactive 3D viewer itself — explode, section, X-ray and rotate each machine, with true kinematic animation.
-- [Blog](https://parthsparmar191098-sketch.github.io/Engine-x/blog.html): articles on how Engine-X is built and how these machines work.
-  - [How I Built Engine-X With Claude](https://parthsparmar191098-sketch.github.io/Engine-x/blog-making-of.html): the story of building an interactive 3D turbocharger and belt-drive atlas without a traditional coding background, working turn by turn with an AI assistant.
+- [Blog](https://parthsparmar191098-sketch.github.io/Engine-x/blog.html): explainer articles on how these machines work.
+  - [What Is Engine-X, and How Do Its Machines Work?](https://parthsparmar191098-sketch.github.io/Engine-x/blog-how-it-works.html): a live, always-current list of every machine in the atlas with its description, plus turbo lag, turbocharger vs supercharger, and belt vs gear drives explained.
+- [How I Built Engine-X With Claude](https://parthsparmar191098-sketch.github.io/Engine-x/blog-making-of.html): a standalone story (linked from the homepage footer, not part of the blog) of building an interactive 3D turbocharger and belt-drive atlas without a traditional coding background, working turn by turn with an AI assistant.
 
 Engineered by Parth Parmar.
