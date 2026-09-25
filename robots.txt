@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parthsparmar191098-sketch.github.io/Engine-x/sitemap.xml

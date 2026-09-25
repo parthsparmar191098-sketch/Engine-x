@@ -2,8 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Engine-X — Cinematic</title>
+<title>Engine-X — Interactive 3D Turbocharger & Belt Drive Anatomy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Engine-X is a free interactive 3D atlas that shows exactly how a turbocharger and a V-belt pulley drive work — every part modeled, exploded, sectioned and animated with true kinematics in your browser.">
+<meta name="keywords" content="how does a turbocharger work, turbocharger 3D model, V-belt pulley drive, belt drive speed ratio, interactive machine anatomy, 3D engine parts explained">
+<link rel="canonical" href="https://parthsparmar191098-sketch.github.io/Engine-x/">
+<meta property="og:title" content="Engine-X — Interactive 3D Turbocharger & Belt Drive Anatomy">
+<meta property="og:description" content="Explore a turbocharger and a V-belt pulley drive part by part in true 3D motion — free, in your browser, no install.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://parthsparmar191098-sketch.github.io/Engine-x/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Engine-X",
+  "url": "https://parthsparmar191098-sketch.github.io/Engine-x/",
+  "description": "An interactive 3D atlas that models a turbocharger and a V-belt pulley drive part by part, with exploded views, sectioning, X-ray mode and true kinematics, running entirely in the browser.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Person", "name": "Parth Parmar" },
+  "about": [
+    { "@type": "Thing", "name": "Turbocharger" },
+    { "@type": "Thing", "name": "V-belt pulley drive" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Engine-X?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Engine-X is a free, browser-based interactive 3D atlas that models real machines — currently a turbocharger and a V-belt pulley drive — part by part, so you can explode, section, rotate and watch them run with true kinematics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a turbocharger work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A turbocharger uses hot exhaust gas leaving the engine to spin a turbine wheel. That turbine is connected by a shared shaft to a compressor wheel on the intake side, so the same spin compresses incoming air and forces extra oxygen into the engine's cylinders, letting it burn more fuel and produce more power without adding engine size. Engine-X lets you explode and section a full 3D turbocharger model to see the turbine housing, compressor housing, center hub, shaft and bearings in true motion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a V-belt pulley drive and how does it change speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A V-belt pulley drive transmits rotation from a driver pulley to a driven pulley using a belt. The speed ratio between them depends only on their diameters: a larger driven pulley turns slower than a smaller driver pulley, in direct proportion to the diameter ratio. Engine-X's 3D model shows a driver shaft, a driven shaft, a belt with tracked reference marks, an idler pulley and a guard, animated with true kinematics so you can see the speed change happen live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is turbo lag and why does it happen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turbo lag is the brief delay between pressing the accelerator and feeling the turbocharger's extra power. It happens because the turbine wheel needs a moment to spin up to speed using exhaust gas flow, so boost pressure builds gradually rather than instantly. Smaller, lighter turbine wheels spin up faster and reduce lag, which is why turbo sizing is a key design trade-off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a turbocharger and a supercharger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A turbocharger is spun by the engine's own exhaust gas, so it recovers energy that would otherwise be wasted, but its boost depends on exhaust flow and builds with a slight delay. A supercharger is spun directly by the engine (usually via a belt), so it delivers boost instantly at any engine speed, but it draws mechanical power directly from the engine to do so."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use a belt and pulley drive instead of gears?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A belt and pulley drive is quieter, cheaper, and more forgiving of shaft misalignment than a gear drive, and it can absorb shocks and slip slightly under an overload instead of breaking teeth. Gears run more efficiently and hold an exact speed ratio, but need precise alignment and lubrication, so belt drives are preferred where cost, simplicity and vibration damping matter more than absolute precision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Engine-X free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Engine-X runs entirely in your web browser at no cost and requires no installation or account."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Parth Parmar",
+  "jobTitle": "Creator, Engine-X",
+  "url": "https://parthsparmar191098-sketch.github.io/Engine-x/"
+}
+</script>
 <style>
   :root{
     --bg:#070b14;
@@ -381,6 +478,7 @@
     <div class="actions">
       <a class="btn primary" href="atlas.html"><span class="play-dot"></span> Enter the Atlas</a>
       <button class="btn ghost" type="button" id="openTrailer">Watch the trailer</button>
+      <a class="btn ghost" href="blog.html">Blog</a>
     </div>
   </div>
 
@@ -390,6 +488,71 @@
     <span class="t-label">LIVE</span>
   </div>
 </div>
+
+<main style="max-width:860px;margin:0 auto;padding:64px 24px 96px;color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;">
+  <h2 style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(28px,4vw,40px);margin:0 0 8px;">What is Engine&#8209;X?</h2>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    Engine&#8209;X is a free, browser&#8209;based interactive 3D atlas that models real mechanical systems part by part.
+    Every component is built as true 3D geometry — not a video or a static render — so you can explode the assembly,
+    slice it open with a section view, switch to an X&#8209;ray mode, and watch it run with true kinematics: the parts
+    move at the speeds and in the directions they actually would in the real machine. It currently covers two machines:
+    a turbocharger and a V&#8209;belt pulley drive.
+  </p>
+
+  <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);margin:36px 0 8px;">How does a turbocharger work?</h3>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    A turbocharger uses hot exhaust gas leaving the engine to spin a turbine wheel. That turbine sits on the same
+    shaft as a compressor wheel on the intake side, so the same spin compresses incoming air and pushes extra oxygen
+    into the engine's cylinders — letting it burn more fuel and make more power without making the engine bigger.
+    In the Engine&#8209;X atlas you can explode and section the full turbocharger model to see the turbine housing,
+    compressor housing, center hub, shared shaft and bearings, all animated in true motion.
+  </p>
+
+  <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);margin:36px 0 8px;">What is a V-belt pulley drive, and how does the speed ratio work?</h3>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    A V&#8209;belt pulley drive transmits rotation from a driver pulley to a driven pulley using a belt. The speed
+    ratio between the two depends only on their diameters: a larger driven pulley turns slower than a smaller driver
+    pulley, in direct proportion to the diameter ratio — for example a 2.5:1 pulley pair turns the driven shaft at
+    roughly 2.5 times less speed than the driver. The Engine&#8209;X model shows a driver shaft, driven shaft, an
+    idler pulley, a tensioned belt with tracked reference marks, and a guard, all animated so you can watch the
+    speed change happen live.
+  </p>
+
+  <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);margin:36px 0 8px;">What is turbo lag, and why does it happen?</h3>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    Turbo lag is the brief delay between pressing the accelerator and feeling the turbocharger's extra power. It
+    happens because the turbine wheel needs a moment to spin up using exhaust gas flow, so boost builds gradually
+    rather than instantly. Smaller, lighter turbine wheels spin up faster and reduce lag, which is why turbo sizing
+    is a key design trade-off.
+  </p>
+
+  <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);margin:36px 0 8px;">Turbocharger vs. supercharger — what's the difference?</h3>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    A turbocharger is spun by the engine's own exhaust gas, recovering energy that would otherwise be wasted, but
+    its boost depends on exhaust flow and builds with a slight delay. A supercharger is spun directly by the engine
+    (usually via a belt), so it delivers boost instantly at any engine speed — at the cost of drawing mechanical
+    power straight from the engine to do it.
+  </p>
+
+  <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);margin:36px 0 8px;">Why use a belt and pulley drive instead of gears?</h3>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    A belt and pulley drive is quieter, cheaper and more forgiving of shaft misalignment than a gear drive, and it
+    can slip slightly under an overload instead of breaking teeth. Gears run more efficiently and hold an exact
+    speed ratio, but need precise alignment and lubrication — so belt drives win where cost, simplicity and
+    vibration damping matter more than absolute precision.
+  </p>
+
+  <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);margin:36px 0 8px;">Is Engine&#8209;X free?</h3>
+  <p style="color:var(--ink-dim);line-height:1.7;font-size:16px;">
+    Yes — Engine&#8209;X runs entirely in your web browser at no cost, with no installation or account required.
+  </p>
+
+  <p style="margin-top:40px;"><a class="btn primary" href="atlas.html" style="text-decoration:none;">Enter the Atlas &rarr;</a></p>
+</main>
+
+<footer style="text-align:center;color:var(--ink-dim);font-size:13px;padding:24px;font-family:'Inter',system-ui,-apple-system,sans-serif;">
+  Engine&#8209;X — engineered by Parth Parmar. &middot; <a href="blog.html" style="color:var(--ink-dim);">Blog</a>
+</footer>
 
 <!-- ---------- TRAILER MODAL (self-contained mini montage) ---------- -->
 <div class="trailerModal" id="trailerModal" aria-hidden="true">
@@ -425,8 +588,8 @@
       <p class="sc-kicker mono">SCENE 04 · THE ATLAS</p>
       <h2 class="sc-title sc-title-big">Engine-X</h2>
       <div class="sc-stats">
-        <div><b>8</b><span>Machines</span></div>
-        <div><b>3,800+</b><span>Modeled parts</span></div>
+        <div><b>75</b><span>Modeled parts</span></div>
+        <div><b>180,000</b><span>Max rpm</span></div>
         <div><b>1:1</b><span>True kinematics</span></div>
       </div>
       <div class="sc-cta">

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>How I Built Engine-X With Claude — Behind the Scenes | Engine-X Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The real story of how Engine-X — an interactive 3D turbocharger and belt-drive atlas — was built, part by part, working turn by turn with Claude, without a traditional coding background.">
+<link rel="canonical" href="https://parthsparmar191098-sketch.github.io/Engine-x/blog-making-of.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How I Built Engine-X With Claude — Behind the Scenes",
+  "description": "The real story of how Engine-X — an interactive 3D turbocharger and belt-drive atlas — was built, part by part, working turn by turn with Claude.",
+  "author": { "@type": "Person", "name": "Parth Parmar" },
+  "url": "https://parthsparmar191098-sketch.github.io/Engine-x/blog-making-of.html",
+  "mainEntityOfPage": "https://parthsparmar191098-sketch.github.io/Engine-x/blog-making-of.html",
+  "publisher": { "@type": "Person", "name": "Parth Parmar" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#070b14; --bg2:#0a1120; --accent:#5ea7ff; --accent-hi:#8fc4ff; --accent2:#8a6cff; --ink:#eaf1ff; --ink-dim:#8fa1bc; color-scheme:dark; }
+  *{box-sizing:border-box;}
+  html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,-apple-system,sans-serif; }
+  a{ color:var(--accent-hi); }
+  .wrap{ max-width:760px; margin:0 auto; padding:56px 24px 96px; }
+  .back{ display:inline-block; margin-bottom:28px; color:var(--ink-dim); text-decoration:none; font-size:14px; }
+  .back:hover{ color:var(--accent-hi); }
+  .kicker{ font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  h1{ font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:clamp(30px,5vw,46px); line-height:1.1; margin:0 0 14px; }
+  .meta{ color:var(--ink-dim); font-size:14px; margin-bottom:36px; }
+  h2{ font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(22px,3vw,28px); margin:40px 0 12px; }
+  p{ color:#cfd9ec; line-height:1.75; font-size:16.5px; margin:0 0 18px; }
+  .pull{ border-left:3px solid var(--accent); padding:4px 0 4px 18px; color:var(--ink); font-style:italic; margin:28px 0; }
+  .cta{ margin-top:48px; padding:22px; border:1px solid rgba(94,167,255,0.25); border-radius:12px; background:rgba(94,167,255,0.06); }
+  .btn{ display:inline-block; margin-top:10px; padding:10px 20px; border-radius:8px; background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#04101f; font-weight:600; text-decoration:none; }
+  footer{ text-align:center; color:var(--ink-dim); font-size:13px; padding:24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="blog.html">&larr; Back to the blog</a>
+  <div class="kicker">Behind the scenes</div>
+  <h1>How I Built Engine-X With Claude</h1>
+  <p class="meta">By Parth Parmar</p>
+
+  <p>
+    I'm not a professional software engineer. Engine-X — a 3D atlas that lets you explode, section and watch a
+    turbocharger and a V-belt pulley drive run with true kinematics — exists because I worked through it turn by
+    turn with Claude, Anthropic's AI assistant, instead of writing every line of Three.js and geometry math myself
+    from scratch.
+  </p>
+
+  <h2>Starting with the idea, not the code</h2>
+  <p>
+    The starting point wasn't a codebase — it was a picture in my head: I wanted to actually <em>see</em> how a
+    turbocharger works, part by part, instead of reading another diagram or watching another animation that skips
+    the mechanism. I described that to Claude — what I wanted the viewer to feel like, what should happen when you
+    explode the parts, how sectioning should work — and we built the app's architecture together from there: a
+    shared geometry toolkit for gears, shafts, bolts and belts, and a simple pattern where every machine is just a
+    file that describes its own parts and how they move.
+  </p>
+
+  <div class="pull">"I didn't need to know Three.js going in — I needed to know exactly what I wanted the machine to look and feel like, and be specific about it."</div>
+
+  <h2>Building part by part, machine by machine</h2>
+  <p>
+    The turbocharger came first — turbine housing, compressor housing, the shared shaft, bearings — each part
+    modeled as real 3D geometry, not a flat image, so it could be exploded and rotated from any angle. Later, I had
+    an old leftover file for a pulley-and-belt drive from an earlier attempt. Rather than uploading it as-is (it was
+    built differently and wouldn't have fit cleanly), Claude rebuilt it properly inside Engine-X's actual
+    architecture — matching the same part-by-part pattern as the turbocharger — without touching or breaking
+    anything that already worked.
+  </p>
+
+  <h2>The debugging story: a site stuck at "0%"</h2>
+  <p>
+    Not everything went smoothly. At one point the live site got stuck indefinitely on "Machining the parts 0%" —
+    the loading screen would appear but the 3D model never showed up. We went through it layer by layer: checked
+    for JavaScript errors, tested whether the CDN serving the 3D library was reachable, and eventually built a
+    small diagnostic script that loaded every dependency one at a time so a failure would name the exact file
+    responsible, instead of a vague, generic error. That's how we found the real cause — a single file that had
+    quietly gone missing from the deployed repository. Once it was restored, the site came back to life.
+  </p>
+
+  <h2>Why this approach worked for me</h2>
+  <p>
+    I didn't need a computer science degree to build something real. What mattered was being clear about what I
+    wanted, describing problems precisely when something broke, and being willing to go back and forth until it
+    actually worked — not just looked like it worked. Engine-X is proof that with the right process, one person
+    with an idea and no traditional coding background can ship a genuinely interactive, technically accurate piece
+    of engineering education.
+  </p>
+
+  <div class="cta">
+    <div style="color:var(--ink);font-weight:600;">See the result for yourself</div>
+    <p style="margin:8px 0 0;">Explore the turbocharger and belt drive in full 3D — free, in your browser.</p>
+    <a class="btn" href="atlas.html">Enter the Atlas &rarr;</a>
+  </div>
+</div>
+<footer>Engine&#8209;X — engineered by Parth Parmar.</footer>
+</body>
+</html>

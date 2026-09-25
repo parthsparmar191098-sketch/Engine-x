@@ -1,0 +1,19 @@
+# Engine-X
+
+> A free, browser-based interactive 3D atlas that models real machines part by part, with exploded views, sectioning, X-ray mode and true kinematics.
+
+Engine-X currently covers two machines:
+
+- **Turbocharger** — hot exhaust gas spins a turbine wheel, which shares a shaft with a compressor wheel on the intake side, forcing extra air into the engine's cylinders for more power without a bigger engine. The 3D model can be exploded and sectioned to show the turbine housing, compressor housing, center hub, shaft and bearings, animated with true kinematics.
+- **V-belt pulley drive** — a belt transmits rotation from a driver pulley to a driven pulley; the speed ratio between them is set by their diameter ratio (a larger driven pulley turns proportionally slower). The model includes a driver shaft, driven shaft, idler pulley, tensioned belt with tracked reference marks, and a guard, all animated live.
+
+Engine-X is free to use, requires no install or account, and runs entirely in the browser.
+
+## Pages
+
+- [Home](https://parthsparmar191098-sketch.github.io/Engine-x/): cinematic landing page, trailer and an FAQ-style explanation of both machines.
+- [Atlas](https://parthsparmar191098-sketch.github.io/Engine-x/atlas.html): the interactive 3D viewer itself — explode, section, X-ray and rotate each machine, with true kinematic animation.
+- [Blog](https://parthsparmar191098-sketch.github.io/Engine-x/blog.html): articles on how Engine-X is built and how these machines work.
+  - [How I Built Engine-X With Claude](https://parthsparmar191098-sketch.github.io/Engine-x/blog-making-of.html): the story of building an interactive 3D turbocharger and belt-drive atlas without a traditional coding background, working turn by turn with an AI assistant.
+
+Engineered by Parth Parmar.
